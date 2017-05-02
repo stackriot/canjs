@@ -11,7 +11,6 @@ require('can-set/test/test');
 require('../view/stache/stache_test');
 require('can-stache-converters/test/test');
 
-
 // Infrastructure tests
 require('../event/event_test');
 if (!System.isEnv('production')) {
@@ -58,6 +57,10 @@ require('can-connect-signalr/test');
 // require('can-jquery/test/test');
 // require('can-vdom/test/test');
 // require('can-zone/test/test');
+
+if(typeof customElements !== "undefined") {
+	require("can-element/test/test");
+}
 
 
 // Integration tests

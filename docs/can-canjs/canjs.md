@@ -180,6 +180,9 @@ render templates in script tags
 - **[can-define-validate-validatejs]** <small><%can-define-validate-validatejs.package.version%></small> Validation for DefineMaps using the ValidateJS library
   - `npm install can-define-validate-validatejs --save`
   - <a class="github-button" href="https://github.com/canjs/can-define-validate-validatejs" data-count-href="/canjs/can-define-validate-validatejs/stargazers" data-count-api="/repos/canjs/can-define-validate-validatejs#stargazers_count">Star</a>
+- **[can-element]** <small><%can-element.package.version%></small> Create custom elements 
+  - `npm install can-element --save`
+  - <a class="github-button" href="https://github.com/canjs/can-element" data-count-href="/canjs/can-element/stargazers" data-count-api="/repos/canjs/can-element#stargazers_count">Star</a>
 
 
 </div>
@@ -278,6 +281,7 @@ __Ecosystem collection__
   "can-view-import": "<%can-view-import.package.version%>",
   "can-zone": "<%can-zone.package.version%>",
   "steal-stache": "<%steal-stache.package.version%>",
+  "can-element": "<%can-element.package.version%>",
 ```
 
 __Legacy Collection__
