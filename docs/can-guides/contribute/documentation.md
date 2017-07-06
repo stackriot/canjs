@@ -1,5 +1,5 @@
 @page guides/contributing/documentation Documentation
-@parent guides/contribute
+@parent guides/contribute 8
 
 @description Learn how to improve CanJS’s site and documentation.
 
@@ -158,7 +158,7 @@ parameters.
 
 
 
-### body
+### Body
 
 Most body sections start with a `## Use` subsection.  This is a mini guide on
 how to use that piece of code.  Modules should have long bodies that span
@@ -168,7 +168,7 @@ information about nearly all of its sub-functions.  However
 use section because it’s covered in [can-component].
 
 
-### structuring documentation
+### Structuring documentation
 
 - Group names (like `prototype`) should be lower case.
 - Types should be capitalized `{String}` except when they are describing a function [can-fixture.requestHandler].

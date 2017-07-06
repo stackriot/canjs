@@ -1,5 +1,5 @@
-@page guides/contributing/releases Releases
-@parent guides/contribute
+@page guides/contributing/releases Releasing CanJS
+@parent guides/contribute 11
 @outline 2
 @description Release and hosting information for CanJS maintainers.
 
@@ -147,30 +147,3 @@ can-core-a           3.0.1 -> 3.0.2
 can-core-b           3.0.1 -> 3.1.0
 can-infrastructure-a 3.0.1 -> 4.0.0
 ```
-
-
-## Updating canjs.com
-
-canjs.com is hosted on [GitHub pages](https://pages.github.com/) from the [canjs/canjs#gh-pages](https://github.com/canjs/canjs/tree/gh-pages) branch. To generate and push a new version of the website, verify you have push access to that branch. Then get all latest changes via:
-
-```
-git checkout master
-git fetch --all && git rebase
-npm cache clean
-rm -rf node_modules
-npm install
-```
-
-We also have to delete the local `gh-pages` branch:
-
-```
-git branch -D gh-pages
-```
-
-Then run
-
-```
-make
-```
-
-This will generate and publish a new version of the website.

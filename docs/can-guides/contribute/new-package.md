@@ -1,37 +1,31 @@
-@page guides/contributing/new-package New Package
-@parent guides/contribute
+@page guides/contributing/adding-ecosystem-modules Making a New Package
+@parent guides/contribute 9
 
 @description Learn how to add a new package to the CanJS toolkit.
-
-@body
-
-Contributing to any Open Source project can be intimidating.  All contributions from all types of contributors are welcome.  We’re
-committed to making the experience as pleasant and rewarding as possible.  We’re happy to set up a
-pairing session and help.  
-
-If you have any questions, you can always reach us on [Gitter chat](https://gitter.im/canjs/canjs).
-
-`CanJS`'s code is split across about 40+ different
-repositories.  All but one of these are __library__ repositories like
-[canjs/can-event](https://github.com/canjs/can-event) and [canjs/can-define](https://github.com/canjs/can-define).  These all work the same way.
-The [canjs/canjs](https://github.com/canjs/canjs) __framework__ repository integrates
-all of the tests and documentation of the __library__ repositories.
 
 On a high-level, to create a new package, you'll need to:
 
 1. Create a new project, with its own tests, build, releases, etc.
 2. Integrate that project's tests and documentation into `canjs/canjs`.
 
+An __official__ plugin is:
+
+ - In a repository under the [https://github.com/canjs CanJS organization].
+ - Listed and documented under the [can-ecosystem Ecosystem Collection].
+ - Tested in the `canjs/canjs` integration suite.
+ - Published as `can-<name>` (with a few exceptions).
+
+__Unofficial__ plugins can be maintained however you choose, but to maximize your project’s:
+
+- Compatibility — useful in as many development environments as possible (Browserify, StealJS, Webpack, etc.)
+- Discoverability — other developers can find it
+- Contribute-ability — other developers can contribute to it
+
+…we suggest following the [DoneJS plugin guide](https://donejs.com/plugin.html) with the following changes:
+
 We've broken this down into the following sections:
 
-- Create a new project
-- Setup Continuous Integration
-- Publish a release
-- Write documentation
-- Integrate build with `canjs/canjs`
-- Integrate documentation with `canjs/canjs`
-- Integrate tests with `canjs/canjs`
-
+@body
 
 ## Create a new project
 
@@ -43,13 +37,13 @@ __2.__ When the `donejs add plugin` generator asks for “Project main folder”
 
 __3.__ List `canjs` in your `package.json`’s `keywords`.
 
-__4.__ Update the code to match the [File organization and responsibilities](#Fileorganizationandresponsibilities) section.  There are a few changes to make:
+__4.__ Update the code to match the _File organization and responsibilities_ section of [guides/contributing/project-organization].  There are a few changes to make:
 
 - Change everything to CommonJS.  Use `require('module-name')` instead of `import 'module-name'`.
 - Use _tabs_ instead of _spaces_.
 - Use dashes instead of underscores in generated filenames.
 
-## Setup Continuous Integration
+## Set up Continuous Integration
 
 ### Adding Greenkeeper
 
